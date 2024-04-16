@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  padding: 4px;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}
+
+.playlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
+  gap: 4px;
+}
+
+.playlist {
+  padding: 0.5rem;
+  border: 1px solid #1d1d1d;
+}
+
+.playlist__title {
+  font-size: 24px;
+}
+
+.songlist {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  margin: 8px 0 0 0;
+  list-style-type: none;
+}
+
+.songlist li {
+  border: 1px solid #4d4d4d;
+  padding: 4px 8px;
+}

@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/styles.css' %}"
+    />
+    <title>Playlists</title>
+  </head>
+  <body>
+    <div class="playlist">
+      <h1 class="playlist__title">{{ playlist.name }}</h1>
+      <p>{{ playlist.desc }}</p>
+
+      <ol class="songlist">
+        {% for song in playlist.songs %}
+        <li>{{ song.name }} by {{ song.artist }}</li>
+        {% endfor %}
+      </ol>
+    </div>
+  </body>
+</html>
